@@ -18,7 +18,7 @@ resource "aws_instance" "modeloteste" {
 }
 ```
 
-Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para acompanhar o processo de trabalho do Terraform.
+Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para você acompanhar o processo de trabalho do Terraform.
 
 #### Documentação oficial:
 
