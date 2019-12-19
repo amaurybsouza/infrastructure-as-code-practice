@@ -28,7 +28,11 @@ terraform show   |Inspect Terraform state or plan
 terraform get    |Download and install modules for the configuration
                  
                  
-                 
+# Terratest
+
+O Terratest é uma biblioteca Go que facilita a criação de testes automatizados para o seu código de infraestrutura.
+
+[Aqui](https://github.com/gruntwork-io/terratest) a documentação oficial.
 
 
 
