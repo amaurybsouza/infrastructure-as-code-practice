@@ -5,10 +5,18 @@ O objetivo desse projeto é mostrar alguns conceitos importantes e casos de uso 
 
 Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para acompanhar o processo de trabalho do Terraform.
 
+#### Documentação oficial:
+
+- [Download URL](https://www.terraform.io/downloads.html)
+- [AWS Resources](https://www.terraform.io/docs/providers/aws/)
+- [List of providers](https://www.terraform.io/docs/providers/index.html)
+
+
 #### Artigos:
 
 1) (IaC) Parte 1: Criando uma instância EC2 na AWS usando Terraform. Clique [aqui](https://medium.com/@amaurybsouza/terraform-e364f5d31570) para acessar.
 
+#### Comandos principais:
 
 
 
