@@ -31,6 +31,9 @@ Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para
 
 1) (IaC) Parte 1: Criando uma instância EC2 na AWS usando Terraform. Clique [aqui](https://medium.com/@amaurybsouza/terraform-e364f5d31570) para acessar.
 
+2) (Iac) Parte 3: Deploy do container nginx usando o Terraform. Clique [aqui](https://medium.com/@amaurybsouza/iac-parte-3-deploy-do-container-nginx-usando-o-terraform-ce26e4400b69) par acessar.
+
+
 #### Comandos principais:
 
 Comandos         | Descrição do comando
