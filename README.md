@@ -20,15 +20,15 @@ Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para
 
 Comandos         | Descrição do comando
 -----------------|-----------------------------------------------
-terraform init   |Cria ou altera a infraestrutura
+terraform init   |Initialize a Terraform working directory
 terraform plan   |Generate and show an execution plan
 terraform apply  |Builds or changes infrastructure
 terraform destroy|Destroy Terraform-managed infrastructure
-                 |
-                 |
-                 |
-                 |
-                 |
+terraform show   |Inspect Terraform state or plan
+terraform get    |Download and install modules for the configuration
+                 
+                 
+                 
 
 
 
