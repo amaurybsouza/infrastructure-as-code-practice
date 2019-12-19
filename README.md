@@ -18,24 +18,21 @@ Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para
 
 #### Comandos principais:
 
-Comandos       | Descrição do comando
----------------|-----------------------------------------------
-terraform init | Cria ou altera a infraestrutura
-               |
-               |
-               |
-               |
-               |
-               |
-               |
-               |
+Comandos         | Descrição do comando
+-----------------|-----------------------------------------------
+terraform init   |Cria ou altera a infraestrutura
+terraform plan   |Generate and show an execution plan
+terraform apply  |Builds or changes infrastructure
+terraform destroy|Destroy Terraform-managed infrastructure
+                 |
+                 |
+                 |
+                 |
+                 |
 
 
 
-$ terraform init (Cria ou altera a infraestrutura)
-$ terraform plan (Console interativo para interpolações do Terraform)
-$ terraform apply (Cria ou altera a infraestrutura)
-$ terraform show ()
+
 
 
 
