@@ -5,7 +5,7 @@ O objetivo desse projeto é mostrar alguns conceitos importantes e casos de uso 
 Veja aqui um exemplo básico de utilização do Terraform para provisionamento de uma instância EC2 na AWS:
 
 ```
-#Configure the AWS Provider
+# Configure the AWS Provider
 provider "aws" {
   region  = "us-east-1"
   shared_credentials_file = "/home/absouza/.aws/credentials"
