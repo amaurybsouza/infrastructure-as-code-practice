@@ -10,7 +10,7 @@ resource "docker_container" "nginx" {
         external = "80"
     }
 }
-# # Create a image
+# Create a image
 resource "docker_image" "nginx" {
     name = "nginx:latest"
 }
