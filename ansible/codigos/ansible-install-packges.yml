@@ -1,0 +1,8 @@
+---
+- hosts: aws
+  tasks:
+    - name: Instalação de algumas aplicações de banco de dados
+      apt:
+        
+
+...
