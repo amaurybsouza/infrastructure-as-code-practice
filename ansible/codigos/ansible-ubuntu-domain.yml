@@ -1,8 +1,14 @@
 --- 
 - hosts: aws
   tasks:
-    - name: Add Ubuntu System for domain LDAP
-      
+    - name: Playbook de configuração do domínio do Ubuntu em sistema LTS 18.04
+      apt:
+        name: Update e upgrade dos pacotes do sistema
+
+
+
+        
+
   
 
 ...
