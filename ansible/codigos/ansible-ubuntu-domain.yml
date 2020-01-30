@@ -1,0 +1,8 @@
+--- 
+- hosts: aws
+  tasks:
+    - name: Add Ubuntu System for domain LDAP
+      
+  
+
+...
