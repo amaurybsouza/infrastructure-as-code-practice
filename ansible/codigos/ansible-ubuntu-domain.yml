@@ -1,14 +1,27 @@
 --- 
 - hosts: aws
   tasks:
-    - name: Playbook de configuração do domínio do Ubuntu em sistema LTS 18.04
+    - name: Preparação/Atualização do sistema 
       apt:
-        name: Update e upgrade dos pacotes do sistema
-
-
-
-        
-
-  
-
+        update_cache: yes
+        upgrade: yes
+    - name: Instalação de pacotes adicionais
+      apt:
+        name:
+          - vim
+          - net-tools
+          - samba-common
+          - reamld
+          - sssd
+          - oddjob-mkhomedir
+          - adcli
+          - policycoreutils-python-utils
+    - name: Adicionando os servidores de DNS no sistema
+      shell: "{{ item }}"
+      with_items:
+      - echo "nameserver 10.10.10.10" >> /etc/resolv.conf
+      - echo "nameserver 10.10.10.10" >> /etc/resolv.conf
+      - echo "session    required    pam_mkhomedir.so skel=/etc/skel umask=0022" >> /etc/pam.d/login
+      - echo "session    required    pam_mkhomedir.so skel=/etc/skel umask=0022" >> /etc/pam.d/common-session
+      - echo "session    required    pam_mkhomedir.so skel=/etc/skel umask=0022" >> /etc/pam.d/gdm-autologin
 ...

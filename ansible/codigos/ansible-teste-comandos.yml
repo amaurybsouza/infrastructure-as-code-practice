@@ -1,0 +1,10 @@
+---
+- hosts: aws
+  tasks: 
+    - name: Teste de comandos no Ansible
+      command: "{{ item }}"
+      with_items:
+      - echo "nameserver 10.10.10.10" >> /etc/resolv.conf
+      - echo "nameserver 10.10.10.20" >> /etc/resolv.conf
+      
+...
