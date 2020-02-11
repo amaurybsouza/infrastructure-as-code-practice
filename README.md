@@ -18,6 +18,27 @@ resource "aws_instance" "modeloteste" {
 }
 ```
 
+Agora outro exemplo usando o provider Docker:
+
+```
+# Configure the Docker provider
+provider "docker" {
+  }
+# Create a Apache Container
+resource "docker_container" "nginx" {
+    image = "nginx"
+    name = "enginecks"
+    ports {
+        internal = "80"
+        external = "80"
+    }
+}
+# Create a image
+resource "docker_image" "nginx" {
+    name = "nginx:latest"
+}
+```
+
 Para ajudar no desenvolvimento, irei destacar alguns artigos que eu escrevi para você acompanhar o processo de trabalho do Terraform.
 
 #### Documentação oficial:
