@@ -1,10 +1,26 @@
 ---
+#Adicionar os arquivos de configuração mais usados no sistema.
 - hosts: local
   tasks: 
     - name: Check for updates
       apt:
         update_cache: yes
-
-
-
+        upgrade: yes
+    - name: Cleaning packages
+      apt:
+        autoclean: yes
+    - name: Remove dependencies
+      apt:
+        autoremove: yes
+    - name: Install Video Codecs
+      apt:
+        pkg:
+        - ubuntu-restricted-extras
+        - vlc
+        - gimp
+        - pinta
+        - shutter
+        - gnome-tweak-tool
+        - vim
+        state: present 
 ...
