@@ -1,0 +1,10 @@
+---
+- hosts: local
+  tasks: 
+    - name: Check for updates
+      apt:
+        update_cache: yes
+
+
+
+...
