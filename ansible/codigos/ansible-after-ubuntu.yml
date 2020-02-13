@@ -23,4 +23,6 @@
         - gnome-tweak-tool
         - vim
         state: present 
+    - name: Configuring vim file
+      shell:
 ...

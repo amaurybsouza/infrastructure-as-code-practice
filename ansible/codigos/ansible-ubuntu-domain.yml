@@ -30,6 +30,8 @@
       shell: realm join --user=Administrator cps.cti.gov.br
     - name: Usando o comando sed para ajustes
       shell: sed -i 's/use_fully_qualified_names = True/use_fully_qualified_names = False/' /etc/sssd/sssd.conf
+    - name: teste
+    - name: teste
 
       
       
