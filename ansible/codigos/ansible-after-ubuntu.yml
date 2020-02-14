@@ -12,7 +12,7 @@
     - name: Remove dependencies
       apt:
         autoremove: yes
-    - name: Install Video Codecs
+    - name: Install main apps for Ubuntu System
       apt:
         pkg:
         - ubuntu-restricted-extras
@@ -22,7 +22,18 @@
         - shutter
         - gnome-tweak-tool
         - vim
+        - spotify
+        - atom
+        - openssh-server
+        - openssh-client
         state: present 
-    - name: Configuring vim file
-      shell: teste12
+        
+    - name: Installing VirtualBox
+      apt_repository:
+        repo: "{{ item.repo }}"
+        state: "{{ item.state }}"
+      with_items:
+        - { state: "present", repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian disco contrib"}
+
+
 ...
