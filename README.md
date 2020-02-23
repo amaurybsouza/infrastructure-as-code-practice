@@ -1,6 +1,25 @@
 # Ansible
 
-Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que uitlizo no meu dia a dia.
+Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
+
+Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based):
+
+```
+---
+- hosts: local
+  tasks: 
+    - name: Upgrade all packages to the latest version
+      apt:  
+        update_cache: yes
+        upgrade: yes
+    - name: Remove useless packages from the cache
+      apt:
+        autoclean: yes
+    - name: Remove dependencies that are no longer required
+      apt:
+        autoremove: yes
+...
+```
 
 # Terraform
 
