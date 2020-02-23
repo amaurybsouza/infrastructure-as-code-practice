@@ -1,5 +1,6 @@
 - hosts: local
   tasks:
-    - name: Install VLC program
+    - name: Installing Pinta program (Debian Based)
       apt:
-        name: dsdsdsdsd
+        name: pinta
+        state: present
