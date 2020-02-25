@@ -1,8 +1,10 @@
 ---
 #Adicionar os arquivos de configuração mais usados no sistema.
-- hosts: local
+
+- hosts: aws
   tasks: 
     - name: Check for updates
+      become_user: root
       apt:
         update_cache: yes
         upgrade: yes
@@ -12,9 +14,11 @@
     - name: Remove dependencies
       apt:
         autoremove: yes
-    - name: Install main apps for Ubuntu System
-      apt:
-        pkg:
+    
+    #Programs installation
+    - name: Installing new programs for Ubuntu System (Debian based)
+      apt: name={{ item }} state=present
+      with_items:
         - ubuntu-restricted-extras
         - vlc
         - gimp
@@ -22,18 +26,16 @@
         - shutter
         - gnome-tweak-tool
         - vim
-        - spotify
-        - atom
         - openssh-server
         - openssh-client
-        state: present 
-        
-    - name: Installing VirtualBox
-      apt_repository:
-        repo: "{{ item.repo }}"
-        state: "{{ item.state }}"
-      with_items:
-        - { state: "present", repo: "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian disco contrib"}
 
-
+    #Installing another programs
+    #Google Chrome
+    - name: Downloading package .deb from internet
+      apt:
+        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - name: Install Google Chrome
+      apt:
+        name: google-chrome-stable
+        state: latest
 ...
