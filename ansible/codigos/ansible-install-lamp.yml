@@ -1,0 +1,79 @@
+---
+- hosts: aws
+  tasks:
+    - name: Updating systems
+      become_user: root
+      apt:
+        update_cache: yes
+        upgrade: yes
+    - name: Install packages for LAMP
+      apt: name={{ item }} state=present
+      with_items:
+        - apache2
+        - mariadb-client
+        - mariadb-server
+        - curl
+        - php
+        - libapache2-mod-php
+        - php-mysql 
+      tags:
+        - packages
+    
+    #Firewall configuration for Apache webserver
+    - name: Configuring Apache firewall
+      command: sudo ufw allow in "Apache Full"
+    
+    #Adding python-mysqldb
+    - name: Adds Python MySQL support on Debian/Ubuntu
+      apt: pkg="python-mysqldb" state=present
+      when: ansible_os_family == 'Debian'
+    - name: Adds Python MySQL support on RedHat/CentOS
+      yum: name=MySQL-python state=present
+      when: ansible_os_family == 'RedHat'
+    
+    # create root .my.cnf config file
+    - name: Add .my.cnf
+      template: src=my.cnf.j2 dest=/root/.my.cnf owner=root group=root mode=0600
+
+# Set root password
+# UPDATE mysql.user SET Password=PASSWORD('mysecret') WHERE User='root';
+# FLUSH PRIVILEGES;
+
+    - name: Set root Password
+      mysql_user: login_password={{ mysql_root_password }} check_implicit_admin=yes name=root host={{ item }} password={{ mysql_root_password }} state=present 
+      with_items:
+        - localhost
+        - 127.0.0.1
+        - ::1
+
+    - name: Reload privilege tables
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - FLUSH PRIVILEGES
+      changed_when: False
+
+    - name: Remove anonymous users
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - DELETE FROM mysql.user WHERE User=''
+      changed_when: False
+
+    - name: Disallow root login remotely
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')
+      changed_when: False
+
+    - name: Remove test database and access to it
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - DROP DATABASE IF EXISTS test
+        - DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%'
+      changed_when: False
+
+    - name: Reload privilege tables
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - FLUSH PRIVILEGES
+      changed_when: False
+...
