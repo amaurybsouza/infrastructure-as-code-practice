@@ -8,14 +8,15 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami = "ami-046842448f9e74e7d"
   instance_type = "t2.micro"
-  key_name = "${aws_key_pair.my_key.key_name}"
-  security_groups = ["${aws_security_group.allow_ssh.name}"]
+# key_name = "${aws_key_pair.my_key.key_name}"
+# security_groups = ["${aws_security_group.allow_ssh.name}"]
+  key_name = "${var.key_name}"
 }
 # Create aws key pair for instance
-resource "aws_key_pair" "my_key" {
-  key_name = "my_key"
-  public_key = "${file("/home/amaury/.ssh/id_rsa.pub")}"
-}
+#resource "aws_key_pair" "my_key" {
+#  key_name = "my_key"
+#  public_key = "${file("/home/amaury/.ssh/id_rsa.pub")}"
+#}
 # Create security group
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"

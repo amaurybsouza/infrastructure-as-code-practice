@@ -1,3 +1,5 @@
 .terraform
 *.backup
 *.tfstate
+ssh.*
+*.pem
