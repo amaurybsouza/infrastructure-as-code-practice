@@ -9,3 +9,4 @@ resource "aws_instance" "new-instance2" {
   instance_type = "t2.micro"
   count = 3
 }
+
