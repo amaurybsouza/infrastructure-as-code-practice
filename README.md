@@ -6,7 +6,7 @@ Veja abaixo algumas das ferramentas que são usadas para esse propósito:
 ![Tools](images/tools.png)
 
 
-![ansible](images/ansible.png.png)
+# Ansible
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
