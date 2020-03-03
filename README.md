@@ -1,3 +1,11 @@
+
+# O que é Infraestrutura como código?
+
+Veja alguma das ferramentas que eu costumo usar:
+
+![Tools](images/tools.png)
+
+
 # Ansible
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
