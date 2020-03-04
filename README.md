@@ -3,10 +3,6 @@
 
 Veja abaixo algumas das ferramentas que são usadas para esse propósito:
 
-![Tools](images/tools.png)
-
-![tools](images/iac1.png)
-
 ![tools](images/iac2.png)
 
 
