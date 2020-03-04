@@ -1,9 +1,11 @@
 
 # O que é Infraestrutura como código?
 
+A IaC (Infrastructure as Code), significa basicamente converter sua infraestrutura "tradicional" em código, onde é gerenciada por algum tipo de sistema de controle de versão, por exemplo, Git, e armazenada em um repositório onde você pode gerenciar semelhante à sua aplicação - por exemplo, com controle de versão para rastreabilidade, verificações de revisão, testes.
+
 ![tools](images/iac2.png)
 
-A IaC (Infrastructure as Code), significa basicamente converter sua infraestrutura "tradicional" em código, onde é gerenciada por algum tipo de sistema de controle de versão, por exemplo, Git, e armazenada em um repositório onde você pode gerenciar semelhante à sua aplicação - por exemplo, com controle de versão para rastreabilidade, verificações de revisão, testes.
+Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códigos usando as principais ferramentas de IaC do mercado. Caso você tenha alguma sugestão de melhoria, não deixe de contribuir com esse repositório, envie um PR que eu analiso e submeto.
 
 
 # Ansible
