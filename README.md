@@ -12,7 +12,9 @@ Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códig
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
-Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based):
+Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
+
+#### Exemplos:
 
 ```
 ---
@@ -33,7 +35,7 @@ Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu
 
 Para ajudar nos exemplos e no entendimento, irei destacar alguns artigos que eu escrevi para você acompanhar o processo de trabalho do Ansible:
 
-#### Artigos
+#### Artigos:
 
 1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) par acessar.
 
@@ -41,7 +43,9 @@ Para ajudar nos exemplos e no entendimento, irei destacar alguns artigos que eu 
 
 O objetivo desse projeto é mostrar alguns conceitos importantes e casos de uso do Terraform usando providers como, AWS, Docker, GCP, entre outros. Tudo isso, com resultados reais e ideias da comunidade afim de ajudar quem está começando.
 
-Veja aqui um exemplo básico de utilização do Terraform para provisionamento de uma instância EC2 na AWS:
+Veja aqui um exemplo básico de utilização do Terraform para provisionamento de uma instância EC2 na AWS.
+
+#### Exemplos:
 
 ```
 # Configure the AWS Provider
