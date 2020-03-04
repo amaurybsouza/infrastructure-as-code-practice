@@ -1,8 +1,6 @@
 
 # O que é Infraestrutura como código?
 
-Veja abaixo algumas das ferramentas que são usadas para esse propósito:
-
 ![tools](images/iac2.png)
 
 
