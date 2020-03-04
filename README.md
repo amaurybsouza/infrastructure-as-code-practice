@@ -5,7 +5,7 @@ A IaC (Infrastructure as Code), significa basicamente converter sua infraestrutu
 
 ![tools](images/iac2.png)
 
-Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códigos usando as principais ferramentas de IaC do mercado. Caso você tenha alguma sugestão de melhoria, não deixe de contribuir com esse repositório, envie um PR que eu analiso e submeto.
+Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códigos usando as principais ferramentas de IaC do mercado. Caso você tenha alguma sugestão de melhoria, contribua com o projeto, envie um PR. 
 
 
 # Ansible
