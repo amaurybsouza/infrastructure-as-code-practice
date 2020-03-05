@@ -7,7 +7,6 @@ A IaC (Infrastructure as Code), significa basicamente converter sua infraestrutu
 
 Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códigos usando as principais ferramentas de IaC do mercado. Caso você tenha alguma sugestão de melhoria, contribua com o projeto, envie um PR. 
 
-
 # Ansible
 
 Antes de iniciar o projeto sobre o Ansible, consulte a documentação oficial da ferramenta. [Clique aqui!](https://docs.ansible.com/)
@@ -18,6 +17,14 @@ O Ansible pode ser usado para alguns casos de uso, veja alguns exemplos:
 - App deployment;
 - Continuous Delivery;
 - Orchestration.
+
+Algumas características do Ansible:
+- É agentless;
+- Desenvolvido em Python;
+- Baixa curva de aprendizado;
+- Playbooks escritos em formato YaML;
+- Possui muitos módulos para executar tasks;
+- A comunidade é bem participativa e produzido pela Red Hat.
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
