@@ -34,6 +34,8 @@ Algumas características do Ansible:
 
 2) Ansible: do zero ao Zabbix. Clique [aqui](https://medium.com/@amaurybsouza/ansible-dozeroaozabbix-a52a5c98175c) para acessar.
 
+3) (IaC) Parte 2: Criando um playbook para provisionamento de 3 instâncias EC2 na AWS usando Ansible. Clique [aqui](https://medium.com/@amaurybsouza/ansible-2b38be85b704) para acessar.
+
 Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
 
 #### Exemplos:
