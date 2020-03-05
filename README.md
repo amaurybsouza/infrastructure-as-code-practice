@@ -9,6 +9,8 @@ Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códig
 
 # Ansible
 
+Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
+
 Antes de iniciar o projeto sobre o Ansible, consulte a documentação oficial da ferramenta. [Clique aqui!](https://docs.ansible.com/)
 
 O Ansible pode ser usado para alguns casos de uso, veja alguns exemplos:
@@ -26,11 +28,11 @@ Algumas características do Ansible:
 - Possui muitos módulos para executar tasks;
 - A comunidade é bem participativa e produzido pela Red Hat.
 
-Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
+#### Artigos publicados no Medium:
 
-#### Artigos que eu publiquei sobre Ansible:
+1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) para acessar.
 
-1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) par acessar.
+2) Ansible: do zero ao Zabbix. Clique [aqui](https://medium.com/@amaurybsouza/ansible-dozeroaozabbix-a52a5c98175c) para acessar.
 
 Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
 
