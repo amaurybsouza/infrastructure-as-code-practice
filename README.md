@@ -12,6 +12,13 @@ Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códig
 
 Antes de iniciar o projeto sobre o Ansible, consulte a documentação oficial da ferramenta. [Clique aqui!](https://docs.ansible.com/)
 
+O Ansible pode ser usado para alguns casos de uso, veja alguns exemplos:
+- Provisioning;
+- Configuration management;
+- App deployment;
+- Continuous Delivery;
+- Orchestration.
+
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
 Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
