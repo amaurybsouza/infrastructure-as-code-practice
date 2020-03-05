@@ -28,6 +28,10 @@ Algumas características do Ansible:
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
+#### Artigos que eu publiquei sobre Ansible:
+
+1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) par acessar.
+
 Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
 
 #### Exemplos:
@@ -50,10 +54,6 @@ Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu
 ```
 
 Para ajudar nos exemplos e no entendimento, irei destacar alguns artigos que eu escrevi para você acompanhar o processo de trabalho do Ansible:
-
-#### Artigos:
-
-1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) par acessar.
 
 # Terraform
 
