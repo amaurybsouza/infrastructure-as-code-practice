@@ -1,16 +1,44 @@
 
 # O que é Infraestrutura como código?
 
-Veja abaixo algumas das ferramentas que são usadas para esse propósito:
+A IaC (Infrastructure as Code), significa basicamente converter sua infraestrutura "tradicional" em código, onde é gerenciada por algum tipo de sistema de controle de versão, por exemplo, Git, e armazenada em um repositório onde você pode gerenciar semelhante à sua aplicação - por exemplo, com controle de versão para rastreabilidade, verificações de revisão, testes.
 
-![Tools](images/tools.png)
+![tools](images/iac2.png)
 
+Abaixo explico alguns conceitos e mostro de forma real alguns exemplos de códigos usando as principais ferramentas de IaC do mercado. Caso você tenha alguma sugestão de melhoria, contribua com o projeto, envie um PR. 
 
 # Ansible
 
 Na parte de Ansible, pretendo mostrar alguns conceitos sobre a ferramenta (how it works) e alguns playbooks que utilizo no meu dia a dia para automatizar os sistemas Linux.
 
-Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based):
+Antes de iniciar o projeto sobre o Ansible, consulte a documentação oficial da ferramenta. [Clique aqui!](https://docs.ansible.com/)
+
+O Ansible pode ser usado para alguns casos de uso, veja alguns exemplos:
+- Provisioning;
+- Configuration management;
+- App deployment;
+- Continuous Delivery;
+- Orchestration.
+
+Algumas características do Ansible:
+- É agentless;
+- Desenvolvido em Python;
+- Baixa curva de aprendizado;
+- Playbooks escritos em formato YaML;
+- Possui muitos módulos para executar tasks;
+- A comunidade é bem participativa e produzido pela Red Hat.
+
+#### Artigos publicados no Medium:
+
+1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) para acessar.
+
+2) Ansible: do zero ao Zabbix. Clique [aqui](https://medium.com/@amaurybsouza/ansible-dozeroaozabbix-a52a5c98175c) para acessar.
+
+3) (IaC) Parte 2: Criando um playbook para provisionamento de 3 instâncias EC2 na AWS usando Ansible. Clique [aqui](https://medium.com/@amaurybsouza/ansible-2b38be85b704) para acessar.
+
+Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu (Debian Based).
+
+#### Exemplos:
 
 ```
 ---
@@ -31,15 +59,13 @@ Abaixo mostro um exemplo de playbooks para atualização do sistema Linux Ubuntu
 
 Para ajudar nos exemplos e no entendimento, irei destacar alguns artigos que eu escrevi para você acompanhar o processo de trabalho do Ansible:
 
-#### Artigos
-
-1) Ansible: conheça alguns módulos essenciais para automação. Clique [aqui](https://medium.com/@amaurybsouza/modules-ansible-e62b7849b94c) par acessar.
-
 # Terraform
 
 O objetivo desse projeto é mostrar alguns conceitos importantes e casos de uso do Terraform usando providers como, AWS, Docker, GCP, entre outros. Tudo isso, com resultados reais e ideias da comunidade afim de ajudar quem está começando.
 
-Veja aqui um exemplo básico de utilização do Terraform para provisionamento de uma instância EC2 na AWS:
+Veja aqui um exemplo básico de utilização do Terraform para provisionamento de uma instância EC2 na AWS.
+
+#### Exemplos:
 
 ```
 # Configure the AWS Provider
