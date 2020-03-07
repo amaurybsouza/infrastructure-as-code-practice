@@ -1,0 +1,7 @@
+---
+- hosts: aws
+  tasks:
+    - name: teste de programas.
+
+
+...
