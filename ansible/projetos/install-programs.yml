@@ -22,6 +22,7 @@
           - atom
           - ansible
           - vagrant
+          - blender
     # Installing docker-ce
     - name: Add Docker GPG apt key
       apt_key:
@@ -36,11 +37,11 @@
         update_cache: yes
         name: docker-ce
         state: latest
+    # Installing Slack for Ubuntu
     - name: Downloading Slack for Ubuntu
       apt:
         deb: wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb
     - name: Installing
       command: sudo apt install ./slack-desktop-*.deb
-    - name: sasasasas
 
 ...
