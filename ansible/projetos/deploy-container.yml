@@ -1,0 +1,8 @@
+---
+- hosts: local
+  tasks:
+    - name: Create a container with limited
+      docker_container:
+        name: sleepy
+        image: ubuntu:16.04
+...
