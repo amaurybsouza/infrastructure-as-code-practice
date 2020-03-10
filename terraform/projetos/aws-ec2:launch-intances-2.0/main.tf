@@ -15,7 +15,7 @@ resource "aws_instance" "example" {
 # Create aws key pair for instance
 resource "aws_key_pair" "deployer" {
   key_name = "deployer-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDIawaCVxHkzPXDXZztg0N4HLl8tMUqIkBkJ7lvCog+qm7HuDrGhY0rw8e6Y/dgk9Rz+MEYerehoPBnclY92h4yEZtNF/brCFdrRs    JRDDw6R6093h/aduFHzRIMu3WmSRpAavdl3+usEk9mDcRseEyUO+dkw7F7ZkEk66Ibz7+ygw== amaury@maumau"
+  public_key = "chave ssh"
 }
 
 # Create security group
