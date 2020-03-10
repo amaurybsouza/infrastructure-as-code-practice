@@ -10,13 +10,14 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 # key_name = "${aws_key_pair.my_key.key_name}"
 # security_groups = ["${aws_security_group.allow_ssh.name}"]
-  key_name = "${var.key_name}"
 }
+
 # Create aws key pair for instance
-#resource "aws_key_pair" "my_key" {
-#  key_name = "my_key"
-#  public_key = "${file("/home/amaury/.ssh/id_rsa.pub")}"
-#}
+resource "aws_key_pair" "deployer" {
+  key_name = "deployer-key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDIawaCVxHkzPXDXZztg0N4HLl8tMUqIkBkJ7lvCog+qm7HuDrGhY0rw8e6Y/dgk9Rz+MEYerehoPBnclY92h4yEZtNF/brCFdrRs    JRDDw6R6093h/aduFHzRIMu3WmSRpAavdl3+usEk9mDcRseEyUO+dkw7F7ZkEk66Ibz7+ygw== amaury@maumau"
+}
+
 # Create security group
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"
