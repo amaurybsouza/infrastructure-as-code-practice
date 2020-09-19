@@ -1,0 +1,47 @@
+---
+- hosts: local
+  tasks:
+    # Inslalling necessary softwares
+    - name: Installing programs (necessary softwares)
+      become_user: root
+      apt: name={{ item }} state=present
+      with_items:
+          - gimp
+          - ubuntu-restricted-extras
+          - vlc
+          - pinta
+          - vim
+          - gnome-tweak-tool
+          - geary
+          - calibre
+    # Installing another tools
+    - name: Installing programs (development)
+      apt: name={{ item }} state=present
+      with_items:
+          - visual-studio-code
+          - atom
+          - ansible
+          - vagrant
+          - blender
+    # Installing docker-ce
+    - name: Add Docker GPG apt key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+    - name: Add Docker repository
+      apt_repository: 
+        repo: deb https://download.docker.com/linux/ubuntu bionic stable
+        state: present
+    - name: Update apt and install docker-ce
+      apt:
+        update_cache: yes
+        name: docker-ce
+        state: latest
+    # Installing Slack for Ubuntu
+    - name: Downloading Slack for Ubuntu
+      apt:
+        deb: wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.3.2-amd64.deb
+    - name: Installing
+      command: sudo apt install ./slack-desktop-*.deb
+
+...

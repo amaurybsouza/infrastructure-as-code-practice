@@ -1,0 +1,13 @@
+---
+- hosts: local
+  tasks:
+    - name: Downloading package .deb from internet
+      apt:
+        deb: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
+    - name: Install Team Viewer
+      apt:
+        name: teamviewer
+        state: latest
+    - name: teste2
+...

@@ -1,0 +1,16 @@
+---
+- hosts: aws
+  tasks:
+    - name: teste de banco de dados
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+          - nmap
+          - mariadb-client
+          - mariadb-server
+
+
+          
+...

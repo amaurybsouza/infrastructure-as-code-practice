@@ -1,0 +1,41 @@
+---
+#Adicionar os arquivos de configuração mais usados no sistema.
+
+- hosts: aws
+  tasks: 
+    - name: Check for updates
+      become_user: root
+      apt:
+        update_cache: yes
+        upgrade: yes
+    - name: Cleaning packages
+      apt:
+        autoclean: yes
+    - name: Remove dependencies
+      apt:
+        autoremove: yes
+    
+    #Programs installation
+    - name: Installing new programs for Ubuntu System (Debian based)
+      apt: name={{ item }} state=present
+      with_items:
+        - ubuntu-restricted-extras
+        - vlc
+        - gimp
+        - pinta
+        - shutter
+        - gnome-tweak-tool
+        - vim
+        - openssh-server
+        - openssh-client
+
+    #Installing another programs
+    #Google Chrome
+    - name: Downloading package .deb from internet
+      apt:
+        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - name: Install Google Chrome
+      apt:
+        name: google-chrome-stable
+        state: latest
+...
