@@ -1,8 +1,0 @@
----
-- hosts: local
-  tasks: 
-    - name: Copy file from /tmp directory
-      copy:
-        src: /home/amaury/teste123
-        dest: /tmp
-...

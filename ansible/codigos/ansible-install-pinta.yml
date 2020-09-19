@@ -1,6 +1,0 @@
-- hosts: local
-  tasks:
-    - name: Installing Pinta program (Debian Based)
-      apt:
-        name: pinta
-        state: present

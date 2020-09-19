@@ -1,9 +1,0 @@
----
-- hosts: aws
-  tasks:
-    - name: Install Apache package (Debian Based)
-      become_user: root
-      apt:
-        name: apache2
-        state: present
-...

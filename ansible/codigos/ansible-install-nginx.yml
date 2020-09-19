@@ -1,7 +1,0 @@
----
-- hosts: local
-  tasks:
-    - name: Install Nginx local
-      apt:
-        name: nginx
-        state: present

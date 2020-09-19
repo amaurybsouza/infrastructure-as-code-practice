@@ -1,8 +1,0 @@
----
-- hosts: aws 
-  tasks:
-    - name: Copy files for my cluster (Example mode)
-      copy:
-        src: /etc/ansible/ansible.cfg
-        dest: /tmp
-...
